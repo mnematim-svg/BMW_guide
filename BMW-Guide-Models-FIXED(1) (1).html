@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BMW Guide؛ راهنمای مستقل مدل‌ها، سری‌ها، خودروهای M و برقی BMW.">
+<title>BMW Guide | راهنمای مدل‌های BMW</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#07090d;--surface:#10141b;--surface2:#151b24;--text:#f5f7fa;--muted:#9ca7b7;--line:rgba(255,255,255,.09);--accent:#4da3ff;--accent2:#8cc7ff;--shadow:0 22px 70px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,rgba(43,128,220,.14),transparent 32rem),radial-gradient(circle at 10% 20%,rgba(78,110,160,.09),transparent 30rem),var(--bg);color:var(--text);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}.site-header{position:sticky;top:0;z-index:50;background:rgba(7,9,13,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:1.35rem;font-weight:900}.brand span{font-weight:500;color:var(--muted);margin-right:4px}.nav-links{display:flex;gap:26px;color:#c7cfdb;font-size:.94rem}.nav-links a:hover{color:white}.menu-btn{display:none;background:none;border:0;color:white;font-size:1.5rem}
+.hero{padding:100px 0 90px;border-bottom:1px solid var(--line)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:70px}.eyebrow{color:var(--accent2);font-size:.75rem;letter-spacing:2px;font-weight:800;margin:0 0 10px}
+h1,h2,h3{line-height:1.2;margin-top:0}h1{font-size:clamp(3rem,7vw,6.2rem);letter-spacing:-4px;margin-bottom:22px}h1 span{background:linear-gradient(90deg,#fff,#72b8ff);-webkit-background-clip:text;color:transparent}.hero-text{max-width:640px;color:var(--muted);font-size:1.08rem}
+.hero-actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border-radius:12px;font-weight:700;border:1px solid var(--line);transition:.25s}.btn:hover{transform:translateY(-3px)}.primary{background:#fff;color:#071018;border-color:#fff}.ghost{background:rgba(255,255,255,.04)}
+.hero-panel{min-height:370px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.015));box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.ring{width:220px;height:220px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:grid;place-items:center;font-size:3rem;font-weight:900;box-shadow:inset 0 0 80px rgba(77,163,255,.08),0 0 80px rgba(77,163,255,.08)}.hero-panel p{font-weight:700;margin:25px 0 4px}.hero-panel small{color:var(--muted)}
+.section{padding:90px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:30px}h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:0;letter-spacing:-1.5px}.search{width:min(340px,100%);padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;color:white;outline:none;font:inherit}.search:focus{border-color:rgba(77,163,255,.7)}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:28px}.filter,.pill{border:1px solid var(--line);background:var(--surface);color:#bac3d0;padding:8px 14px;border-radius:999px;font:inherit;cursor:pointer}.filter.active,.filter:hover{background:#fff;color:#071018}
+.model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.model-card{background:linear-gradient(160deg,var(--surface2),var(--surface));border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.3s}.model-card:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:rgba(255,255,255,.18)}
+.model-art{height:190px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.16),transparent 20%),linear-gradient(135deg,#101823,#080b10)}.model-art:before{content:"";position:absolute;width:72%;height:32%;border:2px solid rgba(255,255,255,.16);border-radius:55% 45% 40% 35%;transform:skewX(-12deg) rotate(-4deg)}.model-art span{position:relative;z-index:2;font-size:3.2rem;font-weight:900;letter-spacing:-2px}.x-art{background:radial-gradient(circle at 50% 50%,rgba(72,151,255,.17),transparent 34%),linear-gradient(135deg,#101923,#080b10)}.m-art{background:radial-gradient(circle at 50% 50%,rgba(255,75,75,.16),transparent 32%),linear-gradient(135deg,#1a1114,#080b10)}.electric-art{background:radial-gradient(circle at 50% 50%,rgba(89,210,255,.18),transparent 34%),linear-gradient(135deg,#0d1920,#080b10)}
+.card-body{padding:20px}.tag{display:inline-block;color:var(--accent2);font-size:.75rem;font-weight:800;margin:0 0 7px}.card-body h3{font-size:1.35rem;margin-bottom:8px}.card-body p:not(.tag){color:var(--muted);font-size:.9rem;margin-top:0}.no-result{display:none;text-align:center;color:var(--muted);padding:40px}
+.feature{background:linear-gradient(120deg,#0e151e,#0b0e13);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.feature h2{margin-bottom:20px}.feature p{color:var(--muted);max-width:650px}.stat-box{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat-box div{min-height:160px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035);display:flex;flex-direction:column;align-items:center;justify-content:center}.stat-box strong{font-size:3rem}.stat-box span{color:var(--muted);font-size:.8rem}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}.info-card{padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}.info-card span{color:var(--accent2);font-weight:800;font-size:.75rem}.info-card h3{font-size:1.8rem;margin:12px 0}.info-card p{color:var(--muted);font-size:.88rem}.details{padding-top:10px}.details-box{border:1px solid var(--line);border-radius:24px;padding:38px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015))}.details-box p{color:var(--muted)}.source-note{font-size:.8rem;border-top:1px solid var(--line);padding-top:18px}.footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.82rem}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer strong{color:white}.footer p{margin:3px 0}
+@media(max-width:850px){.hero-grid,.feature-grid{grid-template-columns:1fr}.model-grid{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:repeat(2,1fr)}.hero{padding-top:65px}}
+@media(max-width:650px){.nav-links{display:none;position:absolute;top:76px;right:4%;left:4%;padding:14px;background:#0c1118;border:1px solid var(--line);border-radius:15px;flex-direction:column;gap:8px}.nav-links.open{display:flex}.menu-btn{display:block}.section-head{align-items:stretch;flex-direction:column}.search{width:100%}.model-grid,.info-grid{grid-template-columns:1fr}h1{letter-spacing:-2px}.hero-panel{min-height:300px}.stat-box{grid-template-columns:1fr}.footer-row{flex-direction:column;align-items:flex-start}}
+
+</style>
+<style>
+.model-detail-overlay{position:fixed;inset:0;background:rgba(5,9,16,.96);z-index:9999;overflow:auto;display:none}
+.model-detail-overlay.show{display:block}
+.model-detail{max-width:1100px;margin:0 auto;padding:28px 20px 60px}
+.model-detail-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}
+.model-back{border:1px solid rgba(255,255,255,.15);background:#121a27;color:#fff;padding:10px 16px;border-radius:12px;cursor:pointer}
+.model-detail-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
+.model-detail-art{min-height:360px;border-radius:24px;background:linear-gradient(145deg,#111b2b,#0b111c);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;padding:28px;position:relative;overflow:hidden}
+.model-detail-art:after{content:"BMW";position:absolute;font-size:130px;font-weight:900;color:rgba(255,255,255,.035);bottom:-25px;right:-8px}
+.model-detail-car{width:min(100%,620px);height:250px;position:relative}
+.model-detail-car .body{position:absolute;left:8%;right:8%;bottom:62px;height:92px;background:linear-gradient(135deg,#f5f7fa,#8c99a8);border-radius:52px 72px 22px 18px;box-shadow:0 20px 35px rgba(0,0,0,.45)}
+.model-detail-car .roof{position:absolute;left:25%;top:38px;width:48%;height:78px;background:linear-gradient(135deg,#dce2e9,#687584);border-radius:70px 80px 10px 10px;transform:skewX(-10deg)}
+.model-detail-car .window{position:absolute;left:31%;top:48px;width:37%;height:45px;background:#172638;border-radius:35px 45px 4px 4px;transform:skewX(-10deg)}
+.model-detail-car .wheel{position:absolute;bottom:28px;width:64px;height:64px;background:#111;border:11px solid #6d7782;border-radius:50%;box-shadow:0 5px 12px #000}
+.model-detail-car .w1{left:18%}.model-detail-car .w2{right:18%}
+.model-detail-info h1{font-size:42px;margin:0 0 10px}
+.model-detail-info .series-label{color:#55a9ff;font-weight:700;margin-bottom:14px}
+.model-detail-info p{line-height:1.9;color:#c9d2df}
+.model-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+.model-spec{background:#111a27;border:1px solid rgba(255,255,255,.08);padding:15px;border-radius:14px}
+.model-spec b{display:block;color:#fff;margin-bottom:5px}.model-spec span{color:#aeb9c7}
+.model-detail-sections{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.model-detail-card{background:#101925;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px}
+.model-detail-card h3{margin-top:0}.model-detail-card p{color:#bac5d3;line-height:1.8}
+@media(max-width:800px){.model-detail-grid,.model-detail-sections{grid-template-columns:1fr}.model-detail-info h1{font-size:32px}.model-detail-art{min-height:290px}}
+
+.real-model-photo{width:100%;height:100%;min-height:320px;max-height:520px;object-fit:contain;border-radius:20px;display:block;box-shadow:0 18px 50px rgba(0,0,0,.42)}
+.model-detail-art{padding:12px!important}
+</style>
+    <style>
+      .site-author{margin-top:10px;opacity:.75;font-size:.9rem;letter-spacing:.3px}
+    </style>
+<style>.model-detail-art.photo-missing::before{content:"تصویر این مدل در دسترس نیست";color:#8e9aaa}</style></head>
+<body>
+<header class="site-header">
+<nav class="nav container">
+<a class="brand" href="#home">BMW<span>Guide</span></a>
+<button class="menu-btn" id="menuBtn">☰</button>
+<div class="nav-links" id="navLinks">
+<a href="#home">خانه</a><a href="#models">مدل‌ها</a><a href="#m">BMW M</a>
+<a href="#electric">برقی</a><a href="#about">درباره سایت</a>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<p class="eyebrow">BMW MODEL GUIDE • 2026</p>
+<h1>دنیای BMW را<br><span>یک‌جا بشناس.</span></h1>
+<p class="hero-text">راهنمای فارسی مدل‌ها، سری‌ها، خودروهای M و خانواده برقی BMW؛ با معرفی ساده و قابل فهم برای علاقه‌مندان خودرو.</p>
+<div class="hero-actions"><a class="btn primary" href="#models">مشاهده مدل‌ها</a><a class="btn ghost" href="#about">درباره پروژه</a></div>
+</div>
+<div class="hero-panel"><div class="ring">BMW</div><p>Sheer Driving Pleasure</p><small>یک پروژه مستقل اطلاعاتی؛ نه وب‌سایت رسمی BMW</small></div>
+</div>
+</section>
+
+<section class="section" id="models">
+<div class="container">
+<div class="section-head"><div><p class="eyebrow">EXPLORE THE RANGE</p><h2>مدل‌ها و خانواده‌ها</h2></div>
+<input id="searchInput" class="search" type="search" placeholder="جست‌وجوی مدل، مثل X5 یا M3"></div>
+<div class="filters" id="filters">
+<button class="filter active" data-filter="all">همه</button><button class="filter" data-filter="sedan">سدان</button>
+<button class="filter" data-filter="suv">SUV / X</button><button class="filter" data-filter="m">BMW M</button>
+<button class="filter" data-filter="electric">برقی</button>
+</div>
+
+<div class="model-grid" id="modelGrid">
+      <article class="model-card" data-name="i8" data-type="electric">
+        <div class="model-art"><span class="photo-label">BMW i8</span></div>
+        <div class="model-card-content">
+          <span class="tag">BMW i</span>
+          <h3>BMW i8</h3>
+          <p>اسپرت پلاگین‌هیبرید BMW</p>
+        </div>
+      </article>
+
+      <article class="model-card" data-name="z4" data-type="all">
+        <div class="model-art"><span class="photo-label">BMW Z4</span></div>
+        <div class="model-card-content">
+          <span class="tag">Z Series</span>
+          <h3>BMW Z4</h3>
+          <p>رودستر دو نفره اسپرت BMW</p>
+        </div>
+      </article>
+
+<div class="model-card" data-type="sedan" data-name="3 series سری 3"><div class="model-art sedan-art"><span>3</span></div><div class="card-body"><p class="tag">سدان</p><h3>BMW سری 3</h3><p>یکی از شناخته‌شده‌ترین خانواده‌های سدان BMW.</p></div></div>
+<div class="model-card" data-type="sedan" data-name="5 series سری 5"><div class="model-art sedan-art"><span>5</span></div><div class="card-body"><p class="tag">سدان</p><h3>BMW سری 5</h3><p>ترکیبی از فضای لوکس، فناوری و شخصیت اسپرت.</p></div></div>
+<div class="model-card" data-type="sedan" data-name="7 series سری 7"><div class="model-art sedan-art"><span>7</span></div><div class="card-body"><p class="tag">لوکس</p><h3>BMW سری 7</h3><p>پرچم‌دار سدان‌های لوکس BMW.</p></div></div>
+<div class="model-card" data-type="suv" data-name="x1"><div class="model-art x-art"><span>X1</span></div><div class="card-body"><p class="tag">X / SUV</p><h3>BMW X1</h3><p>عضو کامپکت خانواده X.</p></div></div>
+<div class="model-card" data-type="suv" data-name="x3"><div class="model-art x-art"><span>X3</span></div><div class="card-body"><p class="tag">X / SUV</p><h3>BMW X3</h3><p>یک SUV میان‌رده از خانواده X.</p></div></div>
+<div class="model-card" data-type="suv" data-name="x5"><div class="model-art x-art featured"><span>X5</span></div><div class="card-body"><p class="tag">X / SUV</p><h3>BMW X5</h3><p>از مدل‌های مهم و باسابقه خانواده X.</p></div></div>
+<div class="model-card" data-type="suv" data-name="x6"><div class="model-art x-art"><span>X6</span></div><div class="card-body"><p class="tag">X / SUV Coupe</p><h3>BMW X6</h3><p>فرم SUV کوپه با شخصیت متفاوت.</p></div></div>
+<div class="model-card" data-type="suv" data-name="x7"><div class="model-art x-art"><span>X7</span></div><div class="card-body"><p class="tag">X / SUV</p><h3>BMW X7</h3><p>عضو بزرگ و لوکس خانواده X.</p></div></div>
+<div class="model-card" data-type="m" data-name="m2"><div class="model-art m-art"><span>M2</span></div><div class="card-body"><p class="tag">BMW M</p><h3>BMW M2</h3><p>عضو کامپکت و عملکردمحور خانواده M.</p></div></div>
+<div class="model-card" data-type="m" data-name="m3"><div class="model-art m-art"><span>M3</span></div><div class="card-body"><p class="tag">BMW M</p><h3>BMW M3</h3><p>نسخه عملکردمحور خانواده سری 3.</p></div></div>
+<div class="model-card" data-type="m" data-name="m4"><div class="model-art m-art"><span>M4</span></div><div class="card-body"><p class="tag">BMW M</p><h3>BMW M4</h3><p>خانواده M با تمرکز بر فرم کوپه و عملکرد.</p></div></div>
+<div class="model-card" data-type="electric" data-name="ix iX"><div class="model-art electric-art"><span>iX</span></div><div class="card-body"><p class="tag">تمام‌برقی</p><h3>BMW iX</h3><p>SUV تمام‌برقی در خانواده BMW i.</p></div></div>
+<div class="model-card" data-type="electric" data-name="i4"><div class="model-art electric-art"><span>i4</span></div><div class="card-body"><p class="tag">تمام‌برقی</p><h3>BMW i4</h3><p>گرن‌کوپه تمام‌برقی BMW i.</p></div></div>
+<div class="model-card" data-type="electric" data-name="i5"><div class="model-art electric-art"><span>i5</span></div><div class="card-body"><p class="tag">تمام‌برقی</p><h3>BMW i5</h3><p>نسخه برقی خانواده سری 5.</p></div></div>
+<div class="model-card" data-type="electric" data-name="i7"><div class="model-art electric-art"><span>i7</span></div><div class="card-body"><p class="tag">تمام‌برقی</p><h3>BMW i7</h3><p>سدان لوکس تمام‌برقی BMW.</p></div></div>
+</div>
+<p class="no-result" id="noResult">مدلی پیدا نشد.</p>
+</div>
+</section>
+
+<section class="feature section" id="m">
+<div class="container feature-grid"><div><p class="eyebrow">BMW M</p><h2>برای علاقه‌مندان به عملکرد</h2>
+<p>خانواده BMW M شامل خودروهای عملکردی و مدل‌های M Performance است. در نسخه‌های بعدی سایت می‌توان نسل‌ها، پیشرانه‌ها و تفاوت مدل‌ها را جداگانه بررسی کرد.</p>
+<a class="btn primary" href="#models">مشاهده مدل‌های M</a></div>
+<div class="stat-box"><div><strong>M</strong><span>Performance</span></div><div><strong>3</strong><span>M3 / سری 3</span></div><div><strong>5</strong><span>M5 / سری 5</span></div></div></div>
+</section>
+
+<section class="section" id="electric">
+<div class="container"><div class="section-head"><div><p class="eyebrow">BMW i</p><h2>دنیای برقی</h2></div><span class="pill">BEV</span></div>
+<div class="info-grid"><div class="info-card"><span>01</span><h3>i4</h3><p>گرن‌کوپه تمام‌برقی در خانواده BMW i.</p></div>
+<div class="info-card"><span>02</span><h3>i5</h3><p>خانواده سری 5 با نسخه تمام‌برقی.</p></div>
+<div class="info-card"><span>03</span><h3>i7</h3><p>سدان لوکس تمام‌برقی BMW.</p></div>
+<div class="info-card"><span>04</span><h3>iX</h3><p>SUV تمام‌برقی BMW.</p></div></div></div>
+</section>
+
+<section class="section details" id="about"><div class="container"><div class="details-box">
+<p class="eyebrow">ABOUT</p><h2>BMW Guide چیست؟</h2>
+<p>این پروژه یک سایت مستقل فارسی برای جمع‌آوری و ساده‌سازی اطلاعات مدل‌های BMW است. اطلاعات مدل‌های فعلی باید با منابع رسمی BMW بررسی شوند؛ مشخصات، قیمت و موجودی می‌توانند بسته به کشور و زمان متفاوت باشند.</p>
+<p class="source-note">منابع پایه این نسخه: صفحات رسمی BMW برای فهرست مدل‌ها و خانواده BMW M.</p>
+</div></div></section>
+</main>
+
+<footer class="footer"><div class="container footer-row"><div><strong>BMW Guide</strong><p>راهنمای مستقل مدل‌های BMW</p></div><p>© 2026 BMW Guide — Independent fan project</p></div>
+        <div class="site-author">Mohammad Amin Nemati</div>
+      </footer>
+<script>
+const filters=document.querySelectorAll(".filter");
+const cards=document.querySelectorAll(".model-card");
+const searchInput=document.getElementById("searchInput");
+const noResult=document.getElementById("noResult");
+const menuBtn=document.getElementById("menuBtn");
+const navLinks=document.getElementById("navLinks");
+let activeFilter="all";
+
+function renderModels(){
+  const query=searchInput.value.trim().toLowerCase();
+  let visible=0;
+  cards.forEach(card=>{
+    const matchesFilter=activeFilter==="all"||card.dataset.type===activeFilter;
+    const matchesSearch=!query||card.dataset.name.toLowerCase().includes(query);
+    card.style.display=matchesFilter&&matchesSearch?"":"none";
+    if(matchesFilter&&matchesSearch) visible++;
+  });
+  noResult.style.display=visible?"none":"block";
+}
+filters.forEach(button=>button.addEventListener("click",()=>{
+  filters.forEach(b=>b.classList.remove("active"));
+  button.classList.add("active");
+  activeFilter=button.dataset.filter;
+  renderModels();
+}));
+searchInput.addEventListener("input",renderModels);
+menuBtn.addEventListener("click",()=>navLinks.classList.toggle("open"));
+navLinks.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>navLinks.classList.remove("open")));
+
+</script>
+
+<div id="modelDetailOverlay" class="model-detail-overlay" aria-hidden="true">
+  <div class="model-detail">
+    <div class="model-detail-top">
+      <div><strong>BMW GUIDE</strong><div style="color:#8e9aaa;font-size:13px;margin-top:4px">راهنمای مدل‌های BMW</div></div>
+      <button class="model-back" id="closeModelDetail">← بازگشت به مدل‌ها</button>
+    </div>
+    <div id="modelDetailContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+const modelData = {
+  "3 Series": {
+    series:"سری 3", type:"سدان / تورینگ", title:"BMW 3 Series", image:"https://bmw.scene7.com/is/image/BMW/g20_ice_stage-50-years%3A16to7?fit=wrap%2C+1&fmt=webp&wid=2560",
+    desc:"سری 3 یکی از شناخته‌شده‌ترین خانواده‌های BMW در کلاس سدان‌های اسپرت است و روی ترکیب هندلینگ، فناوری و استفاده روزمره تمرکز دارد.",
+    points:["طراحی اسپرت و جمع‌وجور","تمرکز بر تجربه رانندگی","در نسخه‌ها و بازارهای مختلف با پیشرانه‌های متنوع عرضه شده است"],
+    use:"برای استفاده روزمره، رفت‌وآمد شهری و رانندگی جاده‌ای مناسب است."
+  },
+  "5 Series": {
+    series:"سری 5", type:"سدان / تورینگ", title:"BMW 5 Series", image:"https://bmw.scene7.com/is/image/BMW/g60-ice-stage-ext-dsk-fb?fmt=webp&qlt=80&wid=1024",
+    desc:"سری 5 در بخش سدان‌های متوسط رو به لوکس BMW قرار می‌گیرد و میان راحتی، فناوری و شخصیت رانندگی تعادل ایجاد می‌کند.",
+    points:["کابین جادارتر از سری 3","تمرکز بیشتر بر راحتی و فناوری","نسخه‌های مختلف بنزینی، هیبریدی یا برقی بسته به بازار"],
+    use:"برای کسانی که خودروی خانوادگی و لوکس‌تری با قابلیت سفر می‌خواهند."
+  },
+  "7 Series": {
+    series:"سری 7", type:"سدان لوکس", title:"BMW 7 Series", image:"https://bmw.scene7.com/is/image/BMW/g70_lci_ice_stage_dsk_fb?fmt=webp&qlt=80&wid=1024",
+    desc:"سری 7 پرچمدار سدان‌های لوکس BMW است و بیشترین تمرکز را روی راحتی، فناوری و امکانات کابین دارد.",
+    points:["کلاس لوکس و کابین بسیار مجهز","تمرکز ویژه روی سرنشینان عقب","فناوری‌های پیشرفته و گزینه‌های قوای محرکه متنوع"],
+    use:"بیشتر برای سفرهای راحت، استفاده تشریفاتی و تجربه لوکس طراحی شده است."
+  },
+  "X1": {
+    series:"X1", type:"SUV کامپکت", title:"BMW X1", image:"https://bmw.scene7.com/is/image/BMW/u11-ice_intro%3A16to7?fit=constrain%2C1&fmt=webp&wid=2560",
+    desc:"X1 یک SUV جمع‌وجور از خانواده X است که فضای کاربردی‌تر و ارتفاع بیشتر از سطح زمین را با ابعاد مناسب شهری ترکیب می‌کند.",
+    points:["ابعاد مناسب شهر","فضای کاربردی","در برخی بازارها با نسخه‌های برقی نیز ارائه می‌شود"],
+    use:"برای شهر و خانواده‌های کوچک که فرم SUV را می‌پسندند."
+  },
+  "X3": {
+    series:"X3", type:"SUV متوسط", title:"BMW X3", image:"https://bmw.scene7.com/is/image/BMW/g45_ice_home-teaser_dsk_fb-2?fmt=webp&qlt=80&wid=1024",
+    desc:"X3 در میانه خانواده SUVهای BMW قرار دارد و ترکیبی از فضای کابین، کاربرد روزمره و ویژگی‌های رانندگی BMW ارائه می‌دهد.",
+    points:["فضای مناسب خانواده","ابعاد متعادل","تنوع نسخه‌های قوای محرکه در بازارهای مختلف"],
+    use:"گزینه‌ای کاربردی برای شهر، سفر و استفاده خانوادگی."
+  },
+  "X5": {
+    series:"X5", type:"SUV لوکس", title:"BMW X5", image:"https://bmw.scene7.com/is/image/BMW/g05_stage-2%3A16to7?fit=wrap%2C+1&fmt=webp&wid=2560",
+    desc:"X5 یکی از مدل‌های مهم خانواده X است و روی ترکیب فضای زیاد، امکانات لوکس و توانایی استفاده در سفر تمرکز دارد.",
+    points:["کابین جادار","سطح بالای امکانات","در برخی نسل‌ها و بازارها نسخه‌های هیبریدی و عملکردی نیز وجود دارد"],
+    use:"برای خانواده، سفرهای طولانی و کسانی که SUV لوکس می‌خواهند."
+  },
+  "X6": {
+    series:"X6", type:"SUV کوپه‌ای", title:"BMW X6", image:"https://bmw.scene7.com/is/image/BMW/g06_stage%3A16to7?fit=wrap%2C+1&fmt=webp&wid=2560",
+    desc:"X6 فرم SUV را با سقف شیب‌دار و ظاهر کوپه‌ای ترکیب می‌کند و روی طراحی متمایز و شخصیت اسپرت تأکید دارد.",
+    points:["طراحی کوپه‌ای","ارتفاع و فرم SUV","تمرکز بیشتر بر ظاهر و شخصیت اسپرت"],
+    use:"برای کسی که ظاهر خاص‌تر یک SUV را می‌خواهد."
+  },
+  "X7": {
+    series:"X7", type:"SUV بزرگ لوکس", title:"BMW X7", image:"https://bmw.scene7.com/is/image/BMW/g07_ice_stage%3A16to7?fit=wrap%2C+1&fmt=webp&wid=2560",
+    desc:"X7 بزرگ‌ترین SUV خانواده BMW X در این مجموعه است و برای فضای کابین، سفر و امکانات لوکس طراحی شده است.",
+    points:["سه ردیف صندلی در پیکربندی‌های مربوط","کابین بزرگ","تمرکز بر راحتی و امکانات لوکس"],
+    use:"برای خانواده‌های بزرگ‌تر و سفرهای طولانی."
+  },
+  "M2": {
+    series:"BMW M", type:"کوپه پرفورمنس", title:"BMW M2", image:"https://bmw.scene7.com/is/image/BMW/g87_mxdrive_stage_desktop_fb?fmt=webp&qlt=80&wid=1024",
+    desc:"M2 یک مدل عملکردی جمع‌وجور از BMW M است که ابعاد نسبتاً کوچک را با تمرکز جدی بر رانندگی اسپرت ترکیب می‌کند.",
+    points:["تمرکز شدید بر عملکرد","بدنه کوپه جمع‌وجور","مهندسی و تنظیمات مخصوص BMW M"],
+    use:"برای علاقه‌مندان به رانندگی اسپرت و خودروهای عملکردی."
+  },
+  "M3": {
+    series:"BMW M", type:"سدان پرفورمنس", title:"BMW M3", image:"https://bmw.scene7.com/is/image/BMW/g80_stage_dsk_fb?fmt=webp&qlt=80&wid=1024",
+    desc:"M3 نسخه عملکردی خانواده سری 3 است و ویژگی‌های یک سدان روزمره را با قوای محرکه و تنظیمات BMW M ترکیب می‌کند.",
+    points:["ریشه در سری 3","عملکرد بالا","نسخه‌های مختلف بسته به بازار و سال تولید"],
+    use:"برای کسی که سدان کاربردی را همراه با عملکرد بسیار بالا می‌خواهد."
+  },
+  "M4": {
+    series:"BMW M", type:"کوپه / کانورتیبل پرفورمنس", title:"BMW M4", image:"https://bmw.scene7.com/is/image/BMW/g82_stage_dsk_fb?fmt=webp&qlt=80&wid=1024",
+    desc:"M4 مدل عملکردی خانواده سری 4 است و بیشتر روی فرم کوپه‌ای، دینامیک رانندگی و شخصیت اسپرت تمرکز دارد.",
+    points:["طراحی کوپه‌ای","فناوری و مهندسی BMW M","تمرکز بر شتاب و هندلینگ"],
+    use:"برای علاقه‌مندان به خودروهای اسپرت کوپه‌ای."
+  },
+  "iX": {
+    series:"BMW i", type:"SUV تمام‌برقی", title:"BMW iX", image:"https://bmw.scene7.com/is/image/BMW/i20_bev_stage_dsk_fb?fmt=webp&qlt=80&wid=1024",
+    desc:"iX یک SUV تمام‌برقی BMW است که از ابتدا با تمرکز بر قوای محرکه الکتریکی، فناوری و طراحی مدرن توسعه یافته است.",
+    points:["پیشرانه تمام‌برقی","کابین و فناوری دیجیتال","تمرکز بر تجربه رانندگی بی‌صدا و مدرن"],
+    use:"برای کسانی که SUV برقی و فناوری‌محور می‌خواهند."
+  },
+  "i4": {
+    series:"BMW i", type:"گرن‌کوپه تمام‌برقی", title:"BMW i4", image:"https://bmw.scene7.com/is/image/BMW/g26_bev_technical-stage%3A16to7?fit=wrap%2C+1&fmt=webp&wid=2560",
+    desc:"i4 یک خودروی تمام‌برقی با فرم گرن‌کوپه است که عناصر خانواده سری 4 را با قوای محرکه الکتریکی ترکیب می‌کند.",
+    points:["تمام‌برقی","فرم گرن‌کوپه","نسخه‌های مختلف با مشخصات متفاوت"],
+    use:"برای کسی که ظاهر یک خودروی اسپرت‌تر را همراه با رانندگی برقی می‌خواهد."
+  },
+  "i5": {
+    series:"BMW i", type:"سدان تمام‌برقی", title:"BMW i5", image:"https://bmw.scene7.com/is/image/BMW/P001_SL_G60-8135_Ext_Dsk_v001?fmt=webp&qlt=80&wid=1024",
+    desc:"i5 نسخه تمام‌برقی خانواده سری 5 است و بین راحتی، فناوری و رانندگی بدون آلایندگی مستقیم ترکیب ایجاد می‌کند.",
+    points:["تمام‌برقی","پایه طراحی مشترک با خانواده سری 5","تمرکز بر راحتی و فناوری"],
+    use:"برای استفاده روزمره و سفر در کلاس سدان‌های لوکس."
+  },
+  "i7": {
+    series:"BMW i", type:"سدان لوکس تمام‌برقی", title:"BMW i7", image:"https://bmw.scene7.com/is/image/BMW/g70_bev_stage_dsk_fb?fmt=webp&qlt=90&wid=1600",
+    desc:"i7 نسخه تمام‌برقی خانواده سری 7 است و بر لوکس بودن، فناوری کابین و تجربه آرام رانندگی تمرکز دارد.",
+    points:["تمام‌برقی","کلاس لوکس","تمرکز ویژه بر امکانات سرنشینان"],
+    use:"برای تجربه لوکس و برقی در سطح بالای محصولات BMW."
+  },
+  "Z4": {
+    series:"Z Series", type:"رودستر دو نفره", title:"BMW Z4",
+    image:"https://bmw.scene7.com/is/image/BMW/g29_stage_ext_dsk_fb?fmt=webp&qlt=90&wid=1600",
+    desc:"BMW Z4 یک رودستر دو نفره اسپرت است که روی رانندگی روباز، ابعاد جمع‌وجور و تجربه رانندگی تمرکز دارد.",
+    points:["رودستر دو نفره","سقف جمع‌شونده","تمرکز روی رانندگی اسپرت"],
+    use:"برای علاقه‌مندان به خودروهای دو نفره روباز و رانندگی اسپرت."
+  },
+  "i8": {
+    series:"BMW i", type:"اسپرت پلاگین‌هیبرید", title:"BMW i8",
+    image:"https://bmw.scene7.com/is/image/BMW/i15_stage_ext_dsk_fb?fmt=webp&qlt=90&wid=1600",
+    desc:"BMW i8 یک خودروی اسپرت پلاگین‌هیبرید بود که موتور بنزینی و سیستم الکتریکی را با طراحی ویژه BMW ترکیب می‌کرد.",
+    points:["پلاگین‌هیبرید","نسخه Coupe و Roadster","تولید در سال‌های 2014 تا 2020"],
+    use:"برای علاقه‌مندان به خودروهای اسپرت و تاریخ خودروهای هیبریدی BMW."
+  },
+};
+
+const overlay=document.getElementById("modelDetailOverlay");
+const content=document.getElementById("modelDetailContent");
+const close=document.getElementById("closeModelDetail");
+
+function keyFromCard(card){
+  const n=(card.getAttribute("data-name")||"").trim();
+  const map={
+    "3 series سری 3":"3 Series","5 series سری 5":"5 Series","7 series سری 7":"7 Series",
+    "x1":"X1","x3":"X3","x5":"X5","x6":"X6","x7":"X7",
+    "m2":"M2","m3":"M3","m4":"M4","ix ix":"iX","ix iX":"iX",
+    "i4":"i4","i5":"i5","i7":"i7","z4":"Z4","i8":"i8","z4":"Z4","i8":"i8","Z4":"Z4","I8":"i8"
+  };
+  return map[n] || null;
+}
+function openModel(key){
+  const d=modelData[key];
+  if(!d) return;
+  content.innerHTML=`
+    <div class="model-detail-grid">
+      <div class="model-detail-art">
+        <img class="real-model-photo" src="${d.image}" alt="تصویر ${d.title}" loading="eager"
+             onerror="this.onerror=null; this.style.display='none'; this.parentElement.classList.add('photo-missing');">
+      </div>
+      <div class="model-detail-info">
+        <div class="series-label">${d.series} • ${d.type}</div>
+        <h1>${d.title}</h1>
+        <p>${d.desc}</p>
+        <div class="model-specs">
+          ${d.points.map((x,i)=>`<div class="model-spec"><b>ویژگی ${i+1}</b><span>${x}</span></div>`).join("")}
+        </div>
+      </div>
+    </div>
+    <div class="model-detail-sections">
+      <div class="model-detail-card"><h3>این مدل چیست؟</h3><p>${d.desc}</p></div>
+      <div class="model-detail-card"><h3>ویژگی‌های مهم</h3><p>${d.points.join(" • ")}</p></div>
+      <div class="model-detail-card"><h3>مناسب چه کسی است؟</h3><p>${d.use}</p></div>
+    </div>
+    <div style="margin-top:22px;color:#7f8da0;font-size:13px">
+      اطلاعات این صفحه به‌صورت خلاصه و غیررسمی تهیه شده و برای مشخصات دقیق هر سال/بازار باید راهنمای رسمی BMW همان خودرو بررسی شود.
+    </div>`;
+  overlay.classList.add("show");
+  overlay.setAttribute("aria-hidden","false");
+  history.pushState({bmwModel:key},"","#"+key.replace(/\s+/g,"-"));
+  window.scrollTo(0,0);
+}
+function closeModel(push=true){
+  overlay.classList.remove("show");
+  overlay.setAttribute("aria-hidden","true");
+  if(push && location.hash) history.pushState({}, "", location.pathname+location.search);
+}
+document.querySelectorAll(".model-card").forEach(card=>{
+  card.style.cursor="pointer";
+  card.addEventListener("click",()=>openModel(keyFromCard(card)));
+});
+close.addEventListener("click",()=>closeModel());
+overlay.addEventListener("click",e=>{if(e.target===overlay) closeModel()});
+window.addEventListener("popstate",()=>closeModel(false));
+})();
+</script>
+
+<script>
+(function(){
+const cardImages = {
+ "3 series سری 3":"https://bmw.scene7.com/is/image/BMW/g20_ice_stage-50-years%3A16to7?fit=wrap%2C+1&fmt=webp&wid=2560",
+ "5 series سری 5":"https://bmw.scene7.com/is/image/BMW/g60-ice-stage-ext-dsk-fb?fmt=webp&qlt=80&wid=1024",
+ "7 series سری 7":"https://bmw.scene7.com/is/image/BMW/g70_lci_ice_stage_dsk_fb?fmt=webp&qlt=80&wid=1024",
+ "x1":"https://bmw.scene7.com/is/image/BMW/u11-ice_intro%3A16to7?fit=constrain%2C1&fmt=webp&wid=2560","x3":"https://bmw.scene7.com/is/image/BMW/g45_ice_home-teaser_dsk_fb-2?fmt=webp&qlt=80&wid=1024",
+ "x5":"https://bmw.scene7.com/is/image/BMW/g05_stage-2%3A16to7?fit=wrap%2C+1&fmt=webp&wid=2560","x6":"https://bmw.scene7.com/is/image/BMW/g06_stage%3A16to7?fit=wrap%2C+1&fmt=webp&wid=2560",
+ "x7":"https://bmw.scene7.com/is/image/BMW/g07_ice_stage%3A16to7?fit=wrap%2C+1&fmt=webp&wid=2560","m2":"https://bmw.scene7.com/is/image/BMW/g87_mxdrive_stage_desktop_fb?fmt=webp&qlt=80&wid=1024",
+ "m3":"https://bmw.scene7.com/is/image/BMW/g80_stage_dsk_fb?fmt=webp&qlt=80&wid=1024","m4":"https://bmw.scene7.com/is/image/BMW/g82_stage_dsk_fb?fmt=webp&qlt=80&wid=1024",
+ "ix iX":"https://bmw.scene7.com/is/image/BMW/i20_bev_stage_dsk_fb?fmt=webp&qlt=80&wid=1024","i4":"https://bmw.scene7.com/is/image/BMW/g26_bev_technical-stage%3A16to7?fit=wrap%2C+1&fmt=webp&wid=2560",
+ "i5":"https://bmw.scene7.com/is/image/BMW/P001_SL_G60-8135_Ext_Dsk_v001?fmt=webp&qlt=80&wid=1024","i7":"https://bmw.scene7.com/is/image/BMW/g70_bev_stage_dsk_fb?fmt=webp&qlt=90&wid=1600"
+,
+ "z4":"https://bmw.scene7.com/is/image/BMW/g29_stage_ext_dsk_fb?fmt=webp&qlt=90&wid=1600",
+ "i8":"https://bmw.scene7.com/is/image/BMW/i15_stage_ext_dsk_fb?fmt=webp&qlt=90&wid=1600"};
+document.querySelectorAll(".model-card").forEach(card=>{
+  const url=cardImages[card.getAttribute("data-name")];
+  if(!url) return;
+  const art=card.querySelector(".model-art");
+  if(!art) return;
+  art.style.backgroundImage=`url("${url}")`;
+  art.style.backgroundSize="contain";
+   art.style.backgroundRepeat="no-repeat";
+   art.style.backgroundColor="#0b111a";
+  art.style.backgroundPosition="center";
+  art.style.minHeight="220px";
+  art.innerHTML='<span class="photo-label">'+(card.querySelector("h3")?.textContent||"BMW")+'</span>';
+});
+})();
+</script>
+<style>
+.model-art{position:relative;overflow:hidden}
+.model-art .photo-label{position:absolute;left:12px;bottom:10px;background:rgba(0,0,0,.55);backdrop-filter:blur(5px);padding:6px 10px;border-radius:9px;color:#fff;font-weight:700}
+</style>
+</body>
+</html>
